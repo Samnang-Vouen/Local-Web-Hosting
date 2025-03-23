@@ -1,7 +1,7 @@
 # Local Website Hosting with HTTPS & Auto-Redirect (Ubuntu + Apache)
 
 ## **🚀 Objective**
-This project demonstrates how to host a website locally on Ubuntu using Apache, enable HTTPS, set up auto-redirect from HTTP to HTTPS, and configure it as a reboot-persistent service. The website is accessible via a local domain name (`segroup2.com.cadt..`).
+This project demonstrates how to host a website locally on Ubuntu using Apache, enable HTTPS, set up auto-redirect from HTTP to HTTPS, and configure it as a reboot-persistent service. The website is accessible via a local domain name (`segroup2.com.cadt`).
 
 ## **🔧 Prerequisites**
 - Ubuntu (or any Linux-based OS).
@@ -40,7 +40,7 @@ sudo nano /etc/hosts
 ```
 Add the following line (replace 192.168.x.x with your server's local IP):
 ```
-192.168.x.x  segroup2.com.cadt..
+192.168.x.x  segroup2.com.cadt
 ```
 Save and exit (CTRL+X, Y, Enter).
 ### 4️⃣ Create Apache Virtual Host Configuration
@@ -51,7 +51,7 @@ sudo nano /etc/apache2/sites-available/segroup2.conf
 Add the following configuration:
 ```
 <VirtualHost *:80>
-    ServerName segroup2.com.cadt..
+    ServerName segroup2.com.cadt
     DocumentRoot /var/www/segroup2
 
     ErrorLog ${APACHE_LOG_DIR}/segroup2_error.log
@@ -63,7 +63,7 @@ Add the following configuration:
 </VirtualHost>
 
 <VirtualHost *:443>
-    ServerName segroup2.com.cadt..
+    ServerName segroup2.com.cadt
     DocumentRoot /var/www/segroup2
 
     SSLEngine on
