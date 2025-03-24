@@ -33,14 +33,14 @@ Set proper permissions:
 sudo chown -R www-data:www-data /var/www/segroup2
 sudo chmod -R 755 /var/www/segroup2
 ```
-### 3️⃣ Configure Local Domain Name (segroup2.com.cadt..)
+### 3️⃣ Configure Local Domain Name (segroup2.com.cadt)
 Edit `/etc/hosts` on your Ubuntu server and all client machines that need access to the local website:
 ```
 sudo nano /etc/hosts
 ```
-Add the following line (replace 192.168.x.x with your server's local IP):
+Add the following line (replace 172.23.x.x with your server's local IP):
 ```
-192.168.x.x  segroup2.com.cadt
+172.23.x.x  segroup2.com.cadt
 ```
 Save and exit (CTRL+X, Y, Enter).
 ### 4️⃣ Create Apache Virtual Host Configuration
